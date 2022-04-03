@@ -10,6 +10,4 @@ import java.util.Set;
 @Repository
 public interface ZipRepository extends JpaRepository<Zip,Long> {
 
-    List<Zip> findAll();
-
 }

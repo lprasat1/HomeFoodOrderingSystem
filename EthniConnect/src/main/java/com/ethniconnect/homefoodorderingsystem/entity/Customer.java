@@ -10,12 +10,12 @@ import javax.persistence.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name="chef_details")
-public class Chef {
+@Table(name="customer_details")
+public class Customer {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "chef_id")
-    private long chefId;
+    @Column(name = "id")
+    private long id;
 
     @Column(name = "user_name")
     private String userName;
@@ -50,16 +50,4 @@ public class Chef {
 
     @Column(name = "zip")
     private String zipCode;
-
-    @Column(name = "about_chef")
-    private String aboutChef;
-
-    @Column(name = "preferred_payment_type")
-    private String preferredPaymentType;
-
-    @Column(name = "image")
-    private Byte[] image;
-
-    @Column(name = "preferred_cuisine_id")
-    private long preferredCuisineId;
 }

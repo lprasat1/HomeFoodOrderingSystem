@@ -14,9 +14,4 @@ public interface MenuRepository extends JpaRepository<Menu, Long> {
      */
     List<Menu> getMenuByChefId(long chefId);
 
-    /*
-    get menu for a particular day by passing chef Id and day
-    eg: 1, Monday
-    */
-    List<Menu> getMenuByChefIdAndDay(long chefId, String day);
 }

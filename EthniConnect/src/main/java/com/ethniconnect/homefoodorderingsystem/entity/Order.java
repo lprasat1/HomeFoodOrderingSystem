@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Data
 @NoArgsConstructor
@@ -12,13 +13,16 @@ import javax.persistence.*;
 @Entity
 @Table(name = "order_details")
 public class Order {
-
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
-    private long menu_id;
-    private  long chef_id;
-    private  long customer_id;
 
+    private String orderStatus;
+
+/*    @OneToMany
+    private List<Menu> menu;
+
+    @OneToOne
+    private Customer customer;*/
 
 }

@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.Date;
 
 @Data
 @NoArgsConstructor
@@ -20,7 +21,10 @@ public class Menu {
     private String ingredients;
     private String interestingFacts;
     private byte[] image;
-    private String day; // Sunday to Saturday
-    private String menuType; // BF,Lunch,Dinner
+    @Enumerated(EnumType.STRING)
+    private Week week; // Sunday to Saturday
+    @Enumerated(EnumType.STRING)
+    private MenuType menuType;
+    private Date preferredTimeSlot; //beyond that order cannot be cancelled
     private long chefId;
 }
